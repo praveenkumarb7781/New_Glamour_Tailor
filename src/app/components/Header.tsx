@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router";
-import { Scissors } from "lucide-react";
 
 export default function Header() {
   const location = useLocation();
@@ -16,9 +15,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#7A1F2B' }}>
-              <Scissors className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}favicon.jpg`}
+              alt="New Glamour Tailor"
+              className="w-10 h-10 rounded-full object-cover"
+            />
             <div>
               <div className="font-serif text-xl" style={{ fontFamily: 'Playfair Display, serif', color: '#7A1F2B' }}>
                 New Glamour
